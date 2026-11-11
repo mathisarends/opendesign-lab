@@ -1,0 +1,7 @@
+node_modules/
+.preview/
+pnpm-lock.yaml
+# Generated snapshots retain the exporter's deterministic formatting.
+skills/maximus-compose/source-lock.json
+skills/maximus-compose/references/
+skills/maximus-compose/assets/starter/assets/

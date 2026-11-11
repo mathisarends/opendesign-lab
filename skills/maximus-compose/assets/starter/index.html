@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Maximus component composition</title>
-    <link rel="stylesheet" href="assets/tokens.css">
-    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="assets/tokens.css" />
+    <link rel="stylesheet" href="layout.css" />
     <script src="assets/maximus-ui.js" defer></script>
     <script src="compose.js" defer></script>
   </head>
@@ -14,34 +14,79 @@
       <header data-od-id="settings-heading" data-od-edit="container">
         <p class="context" data-od-id="settings-context" data-od-edit="text">Workspace settings</p>
         <h1 data-od-id="settings-title" data-od-edit="text">Your workspace</h1>
-        <p data-od-id="settings-intro" data-od-edit="text">Choose how your workspace is named and how you receive updates.</p>
+        <p data-od-id="settings-intro" data-od-edit="text">
+          Choose how your workspace is named and how you receive updates.
+        </p>
       </header>
       <div data-od-id="settings-tabs-layout" data-od-edit="container">
-        <pill-tabs id="settings-tabs" label="Settings sections" active="profile" variant="underline">
-          <section slot="profile" aria-label="Profile settings" data-od-id="profile-panel" data-od-edit="container">
+        <pill-tabs
+          id="settings-tabs"
+          label="Settings sections"
+          active="profile"
+          variant="underline"
+        >
+          <section
+            slot="profile"
+            aria-label="Profile settings"
+            data-od-id="profile-panel"
+            data-od-edit="container"
+          >
             <form id="profile-form" data-od-id="profile-form" data-od-edit="container">
               <div data-od-id="profile-name-layout" data-od-edit="container">
-                <text-input name="workspace-name" label="Workspace name" value="Research workspace" required maxlength="80"></text-input>
+                <text-input
+                  name="workspace-name"
+                  label="Workspace name"
+                  value="Research workspace"
+                  required
+                  maxlength="80"
+                ></text-input>
               </div>
               <div data-od-id="profile-email-layout" data-od-edit="container">
-                <text-input name="email" label="Email address" type="email" placeholder="you@example.com" required></text-input>
+                <text-input
+                  name="email"
+                  label="Email address"
+                  type="email"
+                  placeholder="you@example.com"
+                  required
+                ></text-input>
               </div>
               <div class="action" data-od-id="profile-save-layout" data-od-edit="container">
                 <cta-button label="Save profile" type="submit"></cta-button>
               </div>
-              <p class="notice" id="profile-notice" role="status" data-od-id="profile-notice" data-od-edit="text"></p>
+              <p
+                class="notice"
+                id="profile-notice"
+                role="status"
+                data-od-id="profile-notice"
+                data-od-edit="text"
+              ></p>
             </form>
           </section>
-          <section slot="notifications" aria-label="Notification settings" data-od-id="notifications-panel" data-od-edit="container">
+          <section
+            slot="notifications"
+            aria-label="Notification settings"
+            data-od-id="notifications-panel"
+            data-od-edit="container"
+          >
             <form id="notification-form" data-od-id="notifications-form" data-od-edit="container">
               <h2 data-od-id="notifications-title" data-od-edit="text">Notifications</h2>
               <div data-od-id="notifications-choice-layout" data-od-edit="container">
-                <app-checkbox name="updates" label="Email me when a workspace update is ready" checked></app-checkbox>
+                <app-checkbox
+                  name="updates"
+                  label="Email me when a workspace update is ready"
+                  checked
+                ></app-checkbox>
               </div>
               <div class="action" data-od-id="notifications-save-layout" data-od-edit="container">
                 <cta-button label="Save preferences" type="submit"></cta-button>
               </div>
-              <p class="notice" id="notification-notice" role="status" data-od-id="notifications-notice" data-od-edit="text"></p>
+              <p
+                class="notice"
+                id="notification-notice"
+                role="status"
+                data-od-id="notifications-notice"
+                data-od-edit="text"
+              ></p>
             </form>
           </section>
         </pill-tabs>

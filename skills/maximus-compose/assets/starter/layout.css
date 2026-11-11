@@ -8,17 +8,47 @@ body {
   line-height: var(--line-height-body);
 }
 
-main { max-width: 680px; margin: auto; padding: 48px 24px; }
-header { margin-bottom: 24px; }
-h1 { margin: 8px 0; font-size: var(--font-size-page-title); font-weight: var(--font-weight-heading); }
-h2 { font-size: var(--font-size-panel-title); }
-p { margin: 0; }
-.context, header > p, .notice { color: var(--color-muted); }
-form { display: grid; gap: 24px; padding-top: 8px; }
-.action { max-width: 240px; }
-.notice { min-height: 1.6em; }
+main {
+  max-width: 680px;
+  margin: auto;
+  padding: 48px 24px;
+}
+header {
+  margin-bottom: 24px;
+}
+h1 {
+  margin: 8px 0;
+  font-size: var(--font-size-page-title);
+  font-weight: var(--font-weight-heading);
+}
+h2 {
+  font-size: var(--font-size-panel-title);
+}
+p {
+  margin: 0;
+}
+.context,
+header > p,
+.notice {
+  color: var(--color-muted);
+}
+form {
+  display: grid;
+  gap: 24px;
+  padding-top: 8px;
+}
+.action {
+  max-width: 240px;
+}
+.notice {
+  min-height: 1.6em;
+}
 
 @media (width <= 600px) {
-  main { padding: 24px 16px; }
-  .action { max-width: none; }
+  main {
+    padding: 24px 16px;
+  }
+  .action {
+    max-width: none;
+  }
 }
