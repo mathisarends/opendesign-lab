@@ -4,6 +4,8 @@
 
 A reusable workflow for bringing a component library into [OpenDesign](https://github.com/nexu-io/open-design). The agent reads original component sources on demand; the browser runs the matching build. Designers keep control of layouts, content and UX flows.
 
+See [the vision](vision.md) for the planned developer and designer workflow.
+
 ```text
 UI source -> deterministic export -> versioned component package -> OpenDesign
 ```
