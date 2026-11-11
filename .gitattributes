@@ -1,3 +1,4 @@
 * text=auto eol=lf
 # Whitespace inside generated JavaScript template literals is significant.
-skills/maximus-compose/assets/starter/assets/maximus-ui.js -whitespace
+examples/maximus/package/assets/ui.js -whitespace
+examples/maximus/package/** linguist-generated=true

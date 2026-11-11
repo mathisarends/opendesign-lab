@@ -1,0 +1,546 @@
+{
+  "source": "maximus-trading",
+  "commit": "e6858c59ab4b059c0cc75c93ec6dfe5cf15aabe9",
+  "textEncoding": "utf8-lf",
+  "dependencies": {
+    "lit": "3.3.3",
+    "lucide": "1.48.0"
+  },
+  "tools": {
+    "esbuild": "0.28.2"
+  },
+  "exporterInputs": {
+    "examples/maximus/tools/sync.mjs": "10abb6795ac1eeb9cfac33efaa3ff91e7d2126d9bdbd53f7b1bc275980280c92",
+    "examples/maximus/tools/pull.mjs": "542348b643cac66d511edd702cd72c675038bbc835ebe57d449aec70ed95939b",
+    "examples/maximus/tools/snapshot.mjs": "a2eff504842a383676ec946b285e1e7ddc6a577855447882495e732f989f094d",
+    "examples/maximus/tools/selection.mjs": "450507f9a2e6bec47903be3199b8bc8afe9d9b80114b9a9d0da552839e402b61",
+    "skills/compose-components/SKILL.md": "8a0b824c3eaecb6e9de75c315c4f145ddd862535f5d56949a969a9c72fa8a017",
+    "pnpm-lock.yaml": "d80d092e98151d6739f93a999318672ececacc168d54b89543f72a7569755af6"
+  },
+  "inputs": [
+    {
+      "path": "frontend/node_modules/.pnpm/@lit+reactive-element@2.1.2/node_modules/@lit/reactive-element/css-tag.js",
+      "sha256": "902f8d23ab8fb24afe05596988c22941f080ab58d263e419877006e58ea6c366"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/@lit+reactive-element@2.1.2/node_modules/@lit/reactive-element/decorators/base.js",
+      "sha256": "0c08c31b47af9a37d8650d065ee70be1f2522e7babde22e0697d303392dbe979"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/@lit+reactive-element@2.1.2/node_modules/@lit/reactive-element/decorators/custom-element.js",
+      "sha256": "eb395d688b68c0a5f27f632e77c92bc56a1859139e76f1a61c3a6e42214b4d2e"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/@lit+reactive-element@2.1.2/node_modules/@lit/reactive-element/decorators/property.js",
+      "sha256": "b64fbc3773d7cc80b8c25efece6e5b483e9702040d75a8ef720f06ea6ea3483d"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/@lit+reactive-element@2.1.2/node_modules/@lit/reactive-element/decorators/query.js",
+      "sha256": "0d5f46a7deb407d074ed5dcbab015f18fd57104c88a03b1b20639c844eac2548"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/@lit+reactive-element@2.1.2/node_modules/@lit/reactive-element/decorators/state.js",
+      "sha256": "fa16925ffd02401737959afdb6eaa3735a1b67bd9a8e047e67ee8db8e37a3e37"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/@lit+reactive-element@2.1.2/node_modules/@lit/reactive-element/reactive-element.js",
+      "sha256": "76e9815ec67d16684bff1444224bf62532d6318dbd8f25e7c1e9546158b1335f"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lit-element@4.2.2/node_modules/lit-element/lit-element.js",
+      "sha256": "ee09e38303bb39c36959a961fb0a52663c798ee44493914472c3a61e84e55e3c"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lit-html@3.3.3/node_modules/lit-html/directive-helpers.js",
+      "sha256": "f7fb1154b8f72ed2cc08b05eaeed71c99270e9ad2d48620ed24688a1af4c2b62"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lit-html@3.3.3/node_modules/lit-html/directive.js",
+      "sha256": "3344c4f41c69cd0701d3937e8f9ef90bd845614bf6456d0b8314b7c51d415b9d"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lit-html@3.3.3/node_modules/lit-html/directives/if-defined.js",
+      "sha256": "1d6754369e4e471f9d3b1b106b1b17b201908cd7e370d4694eb83bde6c630c5a"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lit-html@3.3.3/node_modules/lit-html/directives/live.js",
+      "sha256": "b305f9066319d838db797abd5a4d871537277e25f35332702bfce4452c020ecf"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lit-html@3.3.3/node_modules/lit-html/directives/unsafe-html.js",
+      "sha256": "282cc3c937bdf11c99af4180ae7e7fd0a349621d9bf8cb2200a3883c810e9eec"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lit-html@3.3.3/node_modules/lit-html/directives/unsafe-svg.js",
+      "sha256": "321aa9041ce65fb7c9ac7fe279d43167ff65839f837ea2e43276d5e9dbc3cee2"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lit-html@3.3.3/node_modules/lit-html/lit-html.js",
+      "sha256": "b878e7f95dec8a9b6e9b217faca6b6a11bad82ebc44c0caa77419ed83edd81f2"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/archive-restore.mjs",
+      "sha256": "42775611b26e686d80280a8847b5bcf66087cab92a4aa9782ea0cea64c2aba8f"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/archive.mjs",
+      "sha256": "0ccc198703bab8a9e8910560a12c061685bd490b7719a193a53f3ba474ec5ecb"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/arrow-down.mjs",
+      "sha256": "2e9af4b704c43a42d939d8be82d6e0368156edbd0d3d04e2008383fbd7de97a5"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/arrow-left.mjs",
+      "sha256": "0ea3e8405faf8f52b690723eeca8a1946adbf10425500aaddaea58f358910344"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/arrow-right.mjs",
+      "sha256": "e2e4282c9274851f8f02bb84477bdc89b3470578a77a9b9b6ffa37c33390090e"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/arrow-up-right.mjs",
+      "sha256": "a29ed0ca22ec629beda1f27ca2aa0ddabca8da809381c38c1cf2bbc9245df884"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/arrow-up.mjs",
+      "sha256": "df21dc683cdcfae0877ac16cae2fd4ba7cafb7ba12e4f6124ce3d0a36a277928"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/book-open.mjs",
+      "sha256": "f9a2862ba2ef365979511685cdd32426485e341d1bb5d9f4188fb2f7b05c4ab6"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/bot.mjs",
+      "sha256": "96615c9887a1f73319517eb7280dfd01907630bd3056d6c539dcf173468a947d"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/brain.mjs",
+      "sha256": "e36d4486cbac906c54ff4bedb25a2a18072408e9fb5979dbb985a1d0574d74ca"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/calendar.mjs",
+      "sha256": "743767157b38cf9ade7d54522bb091cf5b10690ef9a960237630bbe17bc6a18b"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/chart-no-axes-combined.mjs",
+      "sha256": "ee8d46631ab1b4b96b004f8c815f00f7d8cc8d27b162a0201dbc1e840e99af3b"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/check.mjs",
+      "sha256": "11c09d23f5f7680df43b54d1789ce9c97819885dc32dc96d83afaebf5a9bc095"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/chevron-down.mjs",
+      "sha256": "a4ed14890239e06f4b5923b814de86c730a7c91a9dbbd05851964e8861246fd8"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/circle-check.mjs",
+      "sha256": "9e86021ce9553319e7e87e8e4caa43f3f09993ca17d18e1961790ba7b58a8055"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/circle-x.mjs",
+      "sha256": "cdfa40722960d6af2bc4ec772871ad9467c7ad36a6ccbcfc30f6dafee85ebc92"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/clapperboard.mjs",
+      "sha256": "069a237fdc23115bfd97a33e90ea38a2a9d9b79cc0f5c9f3bbd8d49e6053a934"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/clipboard-list.mjs",
+      "sha256": "98325345f216e65ed099de4a141b830dffaa3e8198ca6a8cfa91267ad1827bf2"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/clock.mjs",
+      "sha256": "ad9d922ab6549b61e84f387203b7e2815d99a22bb2e90927e94bc7b4fbaed57f"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/code-xml.mjs",
+      "sha256": "a6b9955c6c69420316e8cabbaa6d3b11adceeda9f509f5ef50c66bf5c641aa3a"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/command.mjs",
+      "sha256": "affe493e0f98b58385c39b38ec0e6864e60b40a5d382c765c104ea477802ce3a"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/corner-down-right.mjs",
+      "sha256": "8be8f3cb2c13b03489dc08d586bcdbd9ecd4b3f416c735585a4f7f391d91224c"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/download.mjs",
+      "sha256": "53d8cbdee86db77d3ae2c31e600ea8c15ef56102908a460794c6b8b264803482"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/ellipsis-vertical.mjs",
+      "sha256": "a492d539b87daace1e1129fc611d379e821382a31bca8601b332e70f54402553"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/ellipsis.mjs",
+      "sha256": "00d8b014bdaefc15a567819e7da822e4dc82be1cbb4690f70af7893572bfad68"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/eraser.mjs",
+      "sha256": "63b8d2d2be1f7833bab1b5273cd1eb735527776ac58a9c6398bef8c8cf755ffb"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/expand.mjs",
+      "sha256": "7ea98746f429c3214a26436043732070393bdc9bbf698b5acde627f6f33fe0c8"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/eye-off.mjs",
+      "sha256": "175519201c76794e3798adf5759d3cafc49d45e780559b4ac241f46855ffb642"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/eye.mjs",
+      "sha256": "db062b1156e5c3c838baa3d7d13efd1c5e6acd531fa2bd63454dea705e46051b"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/file-diff.mjs",
+      "sha256": "dea34fb1657e77dccba396d5a2f73f26c34978d7ca21800b16dd91d769959524"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/file.mjs",
+      "sha256": "815781a13ff4074da4f35807c6f75165b4230ab4ceb83b21c44872e979ca3199"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/flask-conical.mjs",
+      "sha256": "f8c47705c5df7cbdaf02d6cc9ac990f88cb135ca34bcf10c34e40d83fd08772c"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/folder-open.mjs",
+      "sha256": "56e0f6085d541c210336174f0308787424b2c83fb8dbfd8b6b65b2135af1b2dc"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/folder.mjs",
+      "sha256": "0417d5a2e3f5d864e1b8ed50b271b4a2d9403d17c7628e2990301952ef0c56d3"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/git-branch.mjs",
+      "sha256": "fd95df5615cb7abe7d4164fb79518fd9cf6bceebec4d899f59fbbf24e10449b2"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/globe.mjs",
+      "sha256": "a2b7f06da1a1a936c7780c379c3a8c8114cd4ee67bfc437da5e042e9712afd2d"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/grip-vertical.mjs",
+      "sha256": "32c49133fada0625a7a8a9fbe4ad7a8a29625133c5579cbddbb2d9541ddbd78a"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/headphones.mjs",
+      "sha256": "8b9bcf5c3f60c72e8e2475e826cc08f1082945609cb7544b62f2b9065dee039b"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/heart-pulse.mjs",
+      "sha256": "65e8bbff4cb1fd4259c02975ef5eb4fc642cbe8cb8538f1fe98afd4fd5750806"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/id-card.mjs",
+      "sha256": "305826fc9bae4e2df6b44176880c4b4f7983ebdc8a87149ea1efc1d8d76fcbb0"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/image.mjs",
+      "sha256": "c85d60ec95483b7bfff3513be831c919ce2f6c3b9e57b0206add0e7b34b6003e"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/info.mjs",
+      "sha256": "fa68466842dcef72a52b65db832c864e0695534169bf81a9447782f0f8b7518c"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/layers.mjs",
+      "sha256": "204452ada2fe290da2fa84e7f34ffc3d2ba33dfb39ccf501a4bfe4ccef34e76e"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/link-2.mjs",
+      "sha256": "25fb739aa593a48453cdd276369c0233480d791e7d44c493242933c050062b71"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/list-end.mjs",
+      "sha256": "639e7681e7b3d263d2dbe83e996a40eaad0d168c48655c896a2c52f06b8376c2"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/lock-keyhole-open.mjs",
+      "sha256": "d084f1269c9161cc15484e3e8ef7e2dc88462d033637d56de931413df79a55c5"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/lock-keyhole.mjs",
+      "sha256": "9b78a3e71d4c2bc5ff7d0d0f30d96cb841a01b9e61572a962ef8ee0f422749c3"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/log-out.mjs",
+      "sha256": "aa594198bd7b33559cbd0012dd991099bdbf0421f95e16f3649bc1c18851f283"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/maximize-2.mjs",
+      "sha256": "bf7a69adf0eafe8d4eff943f7cec05d1a96618aed695013fefd8ffb50fec5cfe"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/menu.mjs",
+      "sha256": "3aebbba056fb6b2dee8d3ae71aa96b7a40a5d4211cdd68792b58c484da871984"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/message-square.mjs",
+      "sha256": "354e1360050cf680d2874daa6adf70776dd21ed6e291d38afcc23c3d95596076"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/mic.mjs",
+      "sha256": "831a8fea12b8f97cfa510cdbb4bbe6933d10115bffab7b96155a0c02e02c113a"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/minimize-2.mjs",
+      "sha256": "d0a7783ea4646e1887e6a5b80193db15416d1af4e39217fe9427702fdab0df63"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/minus.mjs",
+      "sha256": "385e4d3cd0cd217a627eb4f7a4eadc9c2367b2f8fd83efd219bef5bae4435bad"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/mouse-pointer-2.mjs",
+      "sha256": "bebe987bad08de26a24ede070705afedd352b3a3ab87392133cc404ed9244604"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/panel-left.mjs",
+      "sha256": "ca5f2e1d77b897f6e100f0feb12e02bb9c011f5f60fee16468f6733f1070e9c1"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/panel-right-open.mjs",
+      "sha256": "62663ce439c1c23a5b28be97111b891bd1bd3ca6d9bb42e54f8c8ae193cc407e"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/panel-right.mjs",
+      "sha256": "c99cd38f59c4ec2f13909e3fd090d65058789026f60d51ab17af84fa2f662746"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/paperclip.mjs",
+      "sha256": "0d7b8a0f7bd5817a767bdbee182bcd51e2f3453e08897e1f25991f599ceedd92"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/pencil.mjs",
+      "sha256": "cf97a57399d973fb1369d9c5c41391a339fc9aa5189696f7048c1b049f8bef45"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/pin-off.mjs",
+      "sha256": "c043193faf825b4d2bdc09f34d31d339c8f42802bf7664d78456d5403696b967"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/pin.mjs",
+      "sha256": "fd645ddea4072ea2826da079f42707ccaf8ec7252b3c530ff6438a3e61b103b9"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/plus.mjs",
+      "sha256": "ddc7995bbd680782eb64bdf50eafc441e1d803bce1cf7b0170452df634950ff5"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/puzzle.mjs",
+      "sha256": "27af356336dc8e9e241562f1eb5f93ecf6db208589845666462148b29872087e"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/redo-2.mjs",
+      "sha256": "b55857e71d6af20621cc0204efcf04f739ab0f7fa65b3077344e4cddd70944ee"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/refresh-cw.mjs",
+      "sha256": "a50a3951beda85df260e3690147c03dc4eb25b56e06b1a6248ce28f64d7bed35"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/rotate-ccw-clock.mjs",
+      "sha256": "14a4e2323000b259ec94d2fe6c22604ed690baea002f4ca71c95b56d20cfb669"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/search.mjs",
+      "sha256": "7d362bd846da30bbe1764d91ed7371bbbf91d7d0e825e3bdfb23bc3f13d0a5dc"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/settings.mjs",
+      "sha256": "8b484ed7642fe372047618a88b319f0a26c79e589e18bb2d122d56a2c75c61c8"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/shield-check.mjs",
+      "sha256": "d5101055b3763a82e92d7efc6dcafec422a1971499487f3697317baa13f881ce"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/sparkles.mjs",
+      "sha256": "110a6fba249da4faf7a5c2a98f19a22d26ca5676902fe584d79c8c9cb2bd5c0d"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/square-pen.mjs",
+      "sha256": "caa0324414cbdc58d4a6308e3ad5612cd2a77749b48fdc4571e5f15b252ba164"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/terminal.mjs",
+      "sha256": "50eca05a067ad4b2ad2470893e868d64959f8d01fe9b1d0cd3358d1bc4dc0e8f"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/timer-off.mjs",
+      "sha256": "b1cb8ae62bf69dbc60208051fdfabbddd6f9af1349a8a3608b40766b16591aba"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/trash.mjs",
+      "sha256": "812c44eb989284a97aaf975469821e3ec75cfa546ac066bc1c97df76d7a8b19a"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/triangle-alert.mjs",
+      "sha256": "a21d51b97cbd6a6fd48943901308a7d2f4c28afbeca04c29f04e22d02426f8b1"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/type.mjs",
+      "sha256": "30011b223e4fa79b2a40a26cab0b44d68f3dc41da2045b34a94338a022c7eab6"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/undo-2.mjs",
+      "sha256": "07adc66c2f64ec7dc20b5791eb6a8845817d4a9541118667b85a8da254ca3cb3"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/user.mjs",
+      "sha256": "231f819f71c300dd795c1e8a58bd53c3fc8789a5666ba087bc690ce5ddad7164"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/wallet.mjs",
+      "sha256": "b1e94265a725d18eba2f16b7ecffcae098f86cf28c544851377e8b1d3dfd830a"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/wrench.mjs",
+      "sha256": "423a1094fed566c2b014f3669fded2aeb44fdaad0afccbea85a29d93821b7264"
+    },
+    {
+      "path": "frontend/node_modules/.pnpm/lucide@1.48.0/node_modules/lucide/dist/esm/icons/x.mjs",
+      "sha256": "276d8831dc626a74b9f9aa06cd72fb10babff8e7c91285d49b4d238c798c2bdb"
+    },
+    {
+      "path": "frontend/package.json",
+      "sha256": "d8e2b520100e63e44f03f1b89ac3f3174fb7a5f03989dd527ad3d5b25afb1858"
+    },
+    {
+      "path": "frontend/src/shared/i18n/format.ts",
+      "sha256": "0c3e5ce8138f186115d5cceaf8447a5056be16fabbec0fc9f8673dbd4ad56f64"
+    },
+    {
+      "path": "frontend/src/shared/i18n/index.ts",
+      "sha256": "8d79b7d59e50256ba9120e0e51e022668ec0ee0a3b94d5a3a8fa14e0a7613c5a"
+    },
+    {
+      "path": "frontend/src/shared/i18n/locale.ts",
+      "sha256": "cc4fe7638a4d770eb9eb74d191e32d67a2c463eb8203493fa7bdb3dfe67d5b4b"
+    },
+    {
+      "path": "frontend/src/shared/i18n/messages.ts",
+      "sha256": "d19d9e21571023ddd418c856cdec713d09e82ae41152ef74618492f3fa9ae29e"
+    },
+    {
+      "path": "frontend/src/shared/i18n/plural.ts",
+      "sha256": "12477f52402f57ca97d63675cd009157f69485d283341552297b0dc1055a3945"
+    },
+    {
+      "path": "frontend/src/shared/keyboard/roving.ts",
+      "sha256": "87f3dd14575c40677936f428aef8ac30ae96b95085de34c57715ff7551878fea"
+    },
+    {
+      "path": "frontend/src/shared/layout/responsive.ts",
+      "sha256": "8182da1d6450a3e12686e3bc6541e73875736a63c55b9fc3abb45bc256c21ac7"
+    },
+    {
+      "path": "frontend/src/shared/local-storage/index.ts",
+      "sha256": "cdb2f46e2e31a6fba37c5f4e68fd567fb30ac872cbbe9787376db23c43eabbc7"
+    },
+    {
+      "path": "frontend/src/shared/local-storage/preference.ts",
+      "sha256": "7c3304dcd320dfe852506580d1d3e87450f31008e3bbc7616e1b206892522e62"
+    },
+    {
+      "path": "frontend/src/shared/local-storage/preferences.ts",
+      "sha256": "6d6dfb743288d06b34b685095a502fd3ad6453c05c5756608d92be24b90f8f3a"
+    },
+    {
+      "path": "frontend/src/shared/styles/controls.ts",
+      "sha256": "9d74a3a7b9d461578048a053e0900f01555281bfe7e63ca5c57a2071b55b32eb"
+    },
+    {
+      "path": "frontend/src/shared/styles/scrollbar.ts",
+      "sha256": "4bee95806c44df0a108929b4873c97d46012455fdaf9043115ff0e52931147a0"
+    },
+    {
+      "path": "frontend/src/shared/styles/workspace.ts",
+      "sha256": "8e6b2c8552f0e3004d47b314baa879f3d57fbad66ddfc6624283971fb1e2a3ad"
+    },
+    {
+      "path": "frontend/src/shared/ui/checkbox/app-checkbox.styles.ts",
+      "sha256": "d36835d248c00a9b32c35eb8bad34232436fd389229d71edfe5a39a0b059ab78"
+    },
+    {
+      "path": "frontend/src/shared/ui/checkbox/app-checkbox.ts",
+      "sha256": "b6b61035187970b73c17b8b438dab99ef23077c440fb25bc517ad29c682ac346"
+    },
+    {
+      "path": "frontend/src/shared/ui/cta-button.ts",
+      "sha256": "c753b8e54007f37fad2e445abd90f142fc6f985e0614754a78736152f4336e03"
+    },
+    {
+      "path": "frontend/src/shared/ui/icons.ts",
+      "sha256": "21d71f5072c18e2e659e4816e5e356a5f8e360a12397d17fcb2d6416d0bcb87c"
+    },
+    {
+      "path": "frontend/src/shared/ui/messages/de.ts",
+      "sha256": "c1d80c689e7c29282ecfb337d0b812bf198ae12133eed94f91673524e1a14c9a"
+    },
+    {
+      "path": "frontend/src/shared/ui/messages/en.ts",
+      "sha256": "2fec50e40e5bdc1dd89daa06e12a49e4e74caadd78d84f3711285f676dade2b1"
+    },
+    {
+      "path": "frontend/src/shared/ui/messages/index.ts",
+      "sha256": "b66befc5fc3142b4acedd8aa9a8b28efc414c70574a70ec9031a18eb9ff2b2cb"
+    },
+    {
+      "path": "frontend/src/shared/ui/pill-tabs.styles.ts",
+      "sha256": "e2a4eea596f7f3b72430618ac4541ef99a5f346b3a6476ad35d15dc5569cf349"
+    },
+    {
+      "path": "frontend/src/shared/ui/pill-tabs.ts",
+      "sha256": "a35bc5ef6ed111182f8e817bbcf74193906f8b647085805297e750101e973685"
+    },
+    {
+      "path": "frontend/src/shared/ui/text-input.ts",
+      "sha256": "9ac6f0a4e8a905f678b42f9142525058eee3163b62d4e5ea865a0b9a9524a146"
+    },
+    {
+      "path": "frontend/src/style.css",
+      "sha256": "547a2b8d2a3e7a493585acc3cce12f75bfe63e754ecdb9253052676e7816d274"
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "sha256": "bb1f5cba1199c4eb080bfac12292b06e5c8b4831f80685055f9545d5436e8ec2"
+    }
+  ],
+  "outputs": {
+    "SKILL.md": "27c40ee86f2f185baaed9e3d6d75cb33e4950e4fccdd9258ca6c2781776bcf04",
+    "assets/ui.js": "6f7dd810b295516e0451c8d8618881b39c2805f8fb2894a7ac1c3fe99fd7d9db",
+    "components/src/shared/i18n/format.ts": "0c3e5ce8138f186115d5cceaf8447a5056be16fabbec0fc9f8673dbd4ad56f64",
+    "components/src/shared/i18n/index.ts": "8d79b7d59e50256ba9120e0e51e022668ec0ee0a3b94d5a3a8fa14e0a7613c5a",
+    "components/src/shared/i18n/locale.ts": "cc4fe7638a4d770eb9eb74d191e32d67a2c463eb8203493fa7bdb3dfe67d5b4b",
+    "components/src/shared/i18n/messages.ts": "d19d9e21571023ddd418c856cdec713d09e82ae41152ef74618492f3fa9ae29e",
+    "components/src/shared/i18n/plural.ts": "12477f52402f57ca97d63675cd009157f69485d283341552297b0dc1055a3945",
+    "components/src/shared/keyboard/roving.ts": "87f3dd14575c40677936f428aef8ac30ae96b95085de34c57715ff7551878fea",
+    "components/src/shared/layout/responsive.ts": "8182da1d6450a3e12686e3bc6541e73875736a63c55b9fc3abb45bc256c21ac7",
+    "components/src/shared/local-storage/index.ts": "cdb2f46e2e31a6fba37c5f4e68fd567fb30ac872cbbe9787376db23c43eabbc7",
+    "components/src/shared/local-storage/preference.ts": "7c3304dcd320dfe852506580d1d3e87450f31008e3bbc7616e1b206892522e62",
+    "components/src/shared/local-storage/preferences.ts": "6d6dfb743288d06b34b685095a502fd3ad6453c05c5756608d92be24b90f8f3a",
+    "components/src/shared/styles/controls.ts": "9d74a3a7b9d461578048a053e0900f01555281bfe7e63ca5c57a2071b55b32eb",
+    "components/src/shared/styles/scrollbar.ts": "4bee95806c44df0a108929b4873c97d46012455fdaf9043115ff0e52931147a0",
+    "components/src/shared/styles/workspace.ts": "8e6b2c8552f0e3004d47b314baa879f3d57fbad66ddfc6624283971fb1e2a3ad",
+    "components/src/shared/ui/checkbox/app-checkbox.styles.ts": "d36835d248c00a9b32c35eb8bad34232436fd389229d71edfe5a39a0b059ab78",
+    "components/src/shared/ui/checkbox/app-checkbox.ts": "b6b61035187970b73c17b8b438dab99ef23077c440fb25bc517ad29c682ac346",
+    "components/src/shared/ui/cta-button.ts": "c753b8e54007f37fad2e445abd90f142fc6f985e0614754a78736152f4336e03",
+    "components/src/shared/ui/icons.ts": "21d71f5072c18e2e659e4816e5e356a5f8e360a12397d17fcb2d6416d0bcb87c",
+    "components/src/shared/ui/messages/de.ts": "c1d80c689e7c29282ecfb337d0b812bf198ae12133eed94f91673524e1a14c9a",
+    "components/src/shared/ui/messages/en.ts": "2fec50e40e5bdc1dd89daa06e12a49e4e74caadd78d84f3711285f676dade2b1",
+    "components/src/shared/ui/messages/index.ts": "b66befc5fc3142b4acedd8aa9a8b28efc414c70574a70ec9031a18eb9ff2b2cb",
+    "components/src/shared/ui/pill-tabs.styles.ts": "e2a4eea596f7f3b72430618ac4541ef99a5f346b3a6476ad35d15dc5569cf349",
+    "components/src/shared/ui/pill-tabs.ts": "a35bc5ef6ed111182f8e817bbcf74193906f8b647085805297e750101e973685",
+    "components/src/shared/ui/text-input.ts": "9ac6f0a4e8a905f678b42f9142525058eee3163b62d4e5ea865a0b9a9524a146",
+    "components/src/style.css": "547a2b8d2a3e7a493585acc3cce12f75bfe63e754ecdb9253052676e7816d274",
+    "components/tsconfig.json": "bb1f5cba1199c4eb080bfac12292b06e5c8b4831f80685055f9545d5436e8ec2",
+    "components/INDEX.md": "e65c568b31d08bcf55cd7770783abd987de4f809c91d8a0a43d93a6e75541451",
+    "assets/tokens.css": "8aa9ae5f2579117553afa10f0e19c7f78371c5792bc4abee56c669d7df16f5a1",
+    "references/DESIGN.md": "262ebd35785e107c36781cadd00e72afa8ed168e280da7123fca7e3bf07b93af"
+  }
+}

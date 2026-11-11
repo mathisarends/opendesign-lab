@@ -1,5 +1,5 @@
 {
-  "name": "vision-design-lab",
+  "name": "opendesign-lab",
   "private": true,
   "type": "module",
   "packageManager": "pnpm@12.14.0",
@@ -8,13 +8,12 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "maximus:sync": "node poc/maximus/sync.mjs",
-    "maximus:check": "node poc/maximus/sync.mjs --check",
-    "maximus:verify": "node poc/maximus/verify.mjs"
+    "maximus:sync": "node examples/maximus/tools/sync.mjs",
+    "maximus:check": "node examples/maximus/tools/sync.mjs --check",
+    "maximus:verify": "node examples/maximus/tools/verify.mjs"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@custom-elements-manifest/analyzer": "0.11.0",
     "esbuild": "0.28.2",
     "eslint": "10.12.0",
     "globals": "17.13.0",

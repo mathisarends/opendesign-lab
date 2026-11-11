@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": false,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "@app/*": ["./src/app/*"],
+      "@api/*": ["./src/api/*"],
+      "@features/*": ["./src/features/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@chat": ["./src/shared/ui/chat/index.ts"],
+      "@chat/*": ["./src/shared/ui/chat/*"],
+      "@local-storage": ["./src/shared/local-storage/index.ts"],
+      "@errors": ["./src/shared/errors/index.ts"],
+      "@toast": ["./src/shared/ui/toast/index.ts"],
+      "@i18n": ["./src/shared/i18n/index.ts"],
+      "@test/*": ["./test/*"]
+    },
+    "lib": ["ES2022", "DOM", "ESNext.Disposable"],
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "experimentalDecorators": true
+  },
+  "include": ["src", "test"]
+}
