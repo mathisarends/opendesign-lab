@@ -1,0 +1,14 @@
+{
+  "name": "vision-design-lab",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "maximus:sync": "node poc/maximus/sync.mjs",
+    "maximus:check": "node poc/maximus/sync.mjs --check",
+    "maximus:verify": "node poc/maximus/verify.mjs"
+  },
+  "devDependencies": {
+    "@custom-elements-manifest/analyzer": "0.11.0",
+    "esbuild": "0.28.2"
+  }
+}

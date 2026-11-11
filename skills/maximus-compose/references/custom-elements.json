@@ -1,0 +1,896 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/shared/ui/cta-button.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "CtaButton",
+          "members": [
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "type": {
+                "text": "\"submit\" | \"button\""
+              },
+              "default": "\"submit\"",
+              "attribute": "type"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "disabled"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "label"
+            },
+            {
+              "name": "type",
+              "type": {
+                "text": "\"submit\" | \"button\""
+              },
+              "default": "\"submit\"",
+              "fieldName": "type"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "disabled"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cta-button",
+          "customElement": true
+        },
+        {
+          "kind": "variable",
+          "name": "ctaButtonStyles",
+          "default": "css` cta-button { display: block; } .cta { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); width: 100%; } .cta span { grid-column: 2; } .cta svg { grid-column: 3; justify-self: end; } `"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CtaButton",
+          "declaration": {
+            "name": "CtaButton",
+            "module": "src/shared/ui/cta-button.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "cta-button",
+          "declaration": {
+            "name": "CtaButton",
+            "module": "src/shared/ui/cta-button.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "ctaButtonStyles",
+          "declaration": {
+            "name": "ctaButtonStyles",
+            "module": "src/shared/ui/cta-button.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/shared/ui/text-input.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "TextInput",
+          "members": [
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "icon",
+              "type": {
+                "text": "IconName | undefined"
+              },
+              "attribute": "icon"
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "type": {
+                "text": "InputType"
+              },
+              "default": "\"text\"",
+              "attribute": "type"
+            },
+            {
+              "kind": "field",
+              "name": "autocomplete",
+              "type": {
+                "text": "Autocomplete | undefined"
+              },
+              "attribute": "autocomplete"
+            },
+            {
+              "kind": "field",
+              "name": "prefix",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "prefix"
+            },
+            {
+              "kind": "field",
+              "name": "placeholder",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "placeholder"
+            },
+            {
+              "kind": "field",
+              "name": "pattern",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "pattern"
+            },
+            {
+              "kind": "field",
+              "name": "patternMessage",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "patternMessage"
+            },
+            {
+              "kind": "field",
+              "name": "hint",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "hint"
+            },
+            {
+              "kind": "field",
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "required"
+            },
+            {
+              "kind": "field",
+              "name": "minlength",
+              "type": {
+                "text": "number | undefined"
+              },
+              "attribute": "minlength"
+            },
+            {
+              "kind": "field",
+              "name": "maxlength",
+              "type": {
+                "text": "number | undefined"
+              },
+              "attribute": "maxlength"
+            },
+            {
+              "kind": "field",
+              "name": "noAutocorrect",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "no-autocorrect"
+            },
+            {
+              "kind": "field",
+              "name": "errorVisible",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "input",
+              "type": {
+                "text": "HTMLInputElement"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "blankIsMissing",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "protected",
+              "readonly": true,
+              "default": "true"
+            },
+            {
+              "kind": "field",
+              "name": "error",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "describedBy",
+              "type": {
+                "text": "string | undefined"
+              },
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "validationMessage",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "string"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "syncValidity",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "showValidity",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "blurred",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "changed",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderLabel",
+              "privacy": "protected",
+              "return": {
+                "type": {
+                  "text": "TemplateResult<1>"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderInput",
+              "privacy": "protected",
+              "return": {
+                "type": {
+                  "text": "TemplateResult<1>"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "type",
+                  "default": "this.type",
+                  "type": {
+                    "text": "InputType"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "renderTrailing",
+              "privacy": "protected",
+              "return": {
+                "type": {
+                  "text": "TemplateResult<1> | typeof nothing"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderIcon",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "TemplateResult<1> | typeof nothing"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderMessage",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "TemplateResult<1> | typeof nothing"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderPrefix",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "TemplateResult<1> | typeof nothing"
+                }
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "value-change",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "label"
+            },
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "name"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "value"
+            },
+            {
+              "name": "icon",
+              "type": {
+                "text": "IconName | undefined"
+              },
+              "fieldName": "icon"
+            },
+            {
+              "name": "type",
+              "type": {
+                "text": "InputType"
+              },
+              "default": "\"text\"",
+              "fieldName": "type"
+            },
+            {
+              "name": "autocomplete",
+              "type": {
+                "text": "Autocomplete | undefined"
+              },
+              "fieldName": "autocomplete"
+            },
+            {
+              "name": "prefix",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "prefix"
+            },
+            {
+              "name": "placeholder",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "placeholder"
+            },
+            {
+              "name": "pattern",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "pattern"
+            },
+            {
+              "name": "patternMessage",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "patternMessage"
+            },
+            {
+              "name": "hint",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "hint"
+            },
+            {
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "required"
+            },
+            {
+              "name": "minlength",
+              "type": {
+                "text": "number | undefined"
+              },
+              "fieldName": "minlength"
+            },
+            {
+              "name": "maxlength",
+              "type": {
+                "text": "number | undefined"
+              },
+              "fieldName": "maxlength"
+            },
+            {
+              "name": "no-autocorrect",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "noAutocorrect"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "text-input",
+          "customElement": true
+        },
+        {
+          "kind": "variable",
+          "name": "textInputStyles",
+          "default": "css` text-input, password-input { display: grid; gap: 8px; font-size: var(--font-size-label); } .field { --input-leading-space: 14px; position: relative; } .input { width: 100%; height: var(--input-height, 48px); padding: 0 14px; border: 1px solid var(--color-border); border-radius: var(--radius-control); background: var(--color-sidebar); color: var(--color-text); font-size: var(--font-size-label); transition: border-color var(--motion-duration-control), background var(--motion-duration-control); } .has-icon { --input-leading-space: 42px; } .has-prefix .input { padding-left: calc(var(--input-leading-space) + var(--input-prefix-width)); } .field-prefix { position: absolute; top: 50%; left: var(--input-leading-space); transform: translateY(-50%); color: var(--color-muted); pointer-events: none; } .has-icon:not(.has-prefix) .input { padding-left: 42px; } .field-icon { position: absolute; top: 50%; left: 15px; display: grid; color: var(--color-muted); transform: translateY(-50%); pointer-events: none; transition: color var(--motion-duration-control); } .input:hover { border-color: var(--color-muted); } .input:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent-soft); background: var(--color-panel); } .input:focus ~ .field-icon { color: var(--color-accent); } .input::placeholder { color: var(--color-muted); opacity: 0.7; } .input:user-invalid, .input[aria-invalid=\"true\"] { border-color: var(--color-error); } .hint { margin: 0; color: var(--color-muted); font-size: var(--font-size-fine-print); line-height: var(--line-height-relaxed); } .hint.error { color: var(--color-error); } `"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TextInput",
+          "declaration": {
+            "name": "TextInput",
+            "module": "src/shared/ui/text-input.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "text-input",
+          "declaration": {
+            "name": "TextInput",
+            "module": "src/shared/ui/text-input.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "textInputStyles",
+          "declaration": {
+            "name": "textInputStyles",
+            "module": "src/shared/ui/text-input.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/shared/ui/checkbox/app-checkbox.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "AppCheckbox",
+          "members": [
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "name"
+            },
+            {
+              "kind": "field",
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "required"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "disabled"
+            },
+            {
+              "kind": "field",
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "checked"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "label"
+            },
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "name"
+            },
+            {
+              "name": "required",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "required"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "checked",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "checked"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "app-checkbox",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "AppCheckbox",
+          "declaration": {
+            "name": "AppCheckbox",
+            "module": "src/shared/ui/checkbox/app-checkbox.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "app-checkbox",
+          "declaration": {
+            "name": "AppCheckbox",
+            "module": "src/shared/ui/checkbox/app-checkbox.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/shared/ui/pill-tabs.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PillTabs",
+          "members": [
+            {
+              "kind": "field",
+              "name": "tabs",
+              "type": {
+                "text": "readonly PillTab[]"
+              },
+              "default": "[]"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "label"
+            },
+            {
+              "kind": "field",
+              "name": "active",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "attribute": "active"
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "\"pill\" | \"underline\""
+              },
+              "default": "\"pill\"",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "scrollable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "scrollable",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "compact",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "compact",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "selected",
+              "type": {
+                "text": "string"
+              },
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "select",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "void"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "id",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "navigate",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "Promise<void>"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "KeyboardEvent"
+                  }
+                },
+                {
+                  "name": "index",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            }
+          ],
+          "events": [
+            {
+              "name": "tab-change",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "label"
+            },
+            {
+              "name": "active",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\"",
+              "fieldName": "active"
+            },
+            {
+              "name": "variant",
+              "type": {
+                "text": "\"pill\" | \"underline\""
+              },
+              "default": "\"pill\"",
+              "fieldName": "variant"
+            },
+            {
+              "name": "scrollable",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "scrollable"
+            },
+            {
+              "name": "compact",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "compact"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "pill-tabs",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "PillTabs",
+          "declaration": {
+            "name": "PillTabs",
+            "module": "src/shared/ui/pill-tabs.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "pill-tabs",
+          "declaration": {
+            "name": "PillTabs",
+            "module": "src/shared/ui/pill-tabs.ts"
+          }
+        }
+      ]
+    }
+  ]
+}
