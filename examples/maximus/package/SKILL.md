@@ -1,6 +1,6 @@
 ---
 name: maximus-compose
-description: Compose and iterate OpenDesign prototypes with a configured UI component library. Use the bundled runtime and inspect matching original component sources on demand instead of recreating controls.
+description: "Compose and iterate OpenDesign prototypes with the real Maximus components (cta-button, text-input, app-checkbox, pill-tabs). Use the bundled runtime and inspect matching original component sources on demand instead of recreating controls."
 od:
   mode: prototype
   surface: web

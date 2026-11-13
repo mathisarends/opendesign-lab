@@ -8,9 +8,11 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "maximus:sync": "node examples/maximus/tools/sync.mjs",
-    "maximus:check": "node examples/maximus/tools/sync.mjs --check",
-    "maximus:verify": "node examples/maximus/tools/verify.mjs"
+    "test": "node --test \"test/*.test.mjs\"",
+    "export": "node exporter/export.mjs",
+    "maximus:export": "node exporter/export.mjs --config examples/maximus/opendesign.config.json",
+    "maximus:check": "node exporter/export.mjs --config examples/maximus/opendesign.config.json --check",
+    "maximus:verify": "node examples/maximus/verify.mjs"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

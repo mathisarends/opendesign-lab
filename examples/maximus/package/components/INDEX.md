@@ -1,6 +1,6 @@
 # Maximus components
 
-Source snapshot: `e6858c59ab4b`. Read only the components you need.
+Snapshot `2741449449d2`. Read only the components you need.
 
 - [cta-button](src/shared/ui/cta-button.ts) - Primary action button (38 lines)
 - [text-input](src/shared/ui/text-input.ts) - Labeled text field with native validation (254 lines)

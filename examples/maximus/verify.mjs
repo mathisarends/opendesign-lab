@@ -6,11 +6,10 @@ import path from 'node:path';
 import os from 'node:os';
 import { pathToFileURL, fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
-import { verifyPull } from './verify-pull.mjs';
-import { verifySnapshotLifecycle } from './verify-snapshot.mjs';
-import { components } from './selection.mjs';
 
-const repo = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
+const repo = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
+const config = path.join(repo, 'examples/maximus/opendesign.config.json');
+const { components } = JSON.parse(await readFile(config, 'utf8'));
 const sourceIndex = process.argv.indexOf('--source');
 assert(sourceIndex !== -1 && process.argv[sourceIndex + 1], 'Pass --source <maximus-repository>');
 const source = path.resolve(process.argv[sourceIndex + 1]);
@@ -23,8 +22,6 @@ const sourceStatus = () =>
   execFileSync('git', ['status', '--porcelain'], { cwd: source, encoding: 'utf8' });
 const before = sourceStatus();
 
-await verifyPull();
-await verifySnapshotLifecycle();
 await verifySnapshot();
 await verifyBrowser();
 
@@ -32,9 +29,9 @@ assert.equal(sourceStatus(), before, 'The source repository must remain unchange
 console.log('PASS source repository unchanged');
 
 async function verifySnapshot() {
-  const sync = path.join(repo, 'examples/maximus/tools/sync.mjs');
+  const exporter = path.join(repo, 'exporter/export.mjs');
   const check = () =>
-    spawnSync(process.execPath, [sync, '--source', source, '--check'], {
+    spawnSync(process.execPath, [exporter, '--source', source, '--config', config, '--check'], {
       cwd: repo,
       encoding: 'utf8',
     });
@@ -120,7 +117,7 @@ async function verifyBrowser() {
     });
     await page.goto(pathToFileURL(path.join(staged, 'index.html')).href);
     await page.waitForFunction(() =>
-      window.MAXIMUS_UI_SNAPSHOT?.tags.every((tag) => customElements.get(tag)),
+      window.OPENDESIGN_COMPONENTS?.tags.every((tag) => customElements.get(tag)),
     );
     await verifyForms(page);
     await verifyComponentRendering(page);
@@ -205,7 +202,7 @@ async function verifyComponentRendering(page) {
     shadowTabs: Boolean(document.querySelector('pill-tabs').shadowRoot),
     lightInput: document.querySelector('text-input').shadowRoot === null,
     lightButton: document.querySelector('cta-button').shadowRoot === null,
-    tags: window.MAXIMUS_UI_SNAPSHOT.tags,
+    tags: window.OPENDESIGN_COMPONENTS.tags,
   }));
   assert(runtime.shadowTabs && runtime.lightInput && runtime.lightButton);
   assert.equal(runtime.tags.length, 4);

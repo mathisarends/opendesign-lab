@@ -1,0 +1,47 @@
+{
+  "name": "maximus",
+  "title": "Maximus",
+  "root": "frontend",
+  "components": [
+    {
+      "tag": "cta-button",
+      "file": "src/shared/ui/cta-button.ts",
+      "purpose": "Primary action button"
+    },
+    {
+      "tag": "text-input",
+      "file": "src/shared/ui/text-input.ts",
+      "purpose": "Labeled text field with native validation"
+    },
+    {
+      "tag": "app-checkbox",
+      "file": "src/shared/ui/checkbox/app-checkbox.ts",
+      "purpose": "Checkbox for an on/off choice"
+    },
+    {
+      "tag": "pill-tabs",
+      "file": "src/shared/ui/pill-tabs.ts",
+      "purpose": "Tabbed content with named slots"
+    }
+  ],
+  "styles": {
+    "controls": "src/shared/styles/controls.ts",
+    "ctaButtonStyles": "src/shared/ui/cta-button.ts",
+    "textInputStyles": "src/shared/ui/text-input.ts",
+    "appCheckboxStyles": "src/shared/ui/checkbox/app-checkbox.styles.ts"
+  },
+  "tokens": "src/style.css",
+  "tokenSummary": [
+    "--color-background",
+    "--color-panel",
+    "--color-text",
+    "--color-muted",
+    "--color-accent",
+    "--font-sans",
+    "--font-size-body",
+    "--font-size-page-title",
+    "--radius-control",
+    "--radius-pill"
+  ],
+  "out": "package"
+}

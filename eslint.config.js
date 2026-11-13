@@ -11,7 +11,7 @@ export default [
     rules: { ...js.configs.recommended.rules, curly: ['error', 'all'] },
   },
   {
-    files: ['examples/maximus/tools/verify.mjs'],
+    files: ['examples/maximus/verify.mjs'],
     languageOptions: { globals: { ...globals.node, ...globals.browser } },
   },
   {

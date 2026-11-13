@@ -1,8 +1,8 @@
 # Maximus UI foundations
 
-Generated from `frontend/src/style.css` at `e6858c59ab4b`.
+Generated from `frontend/src/style.css`, snapshot `2741449449d2`.
 
-Use the original runtime and its source tokens. Component appearance is supplied by the library; author only surrounding layout CSS. System font fallbacks remain available; webfont binaries are not included in this PoC.
+Use the original runtime and its source tokens. Component appearance is supplied by the library; author only surrounding layout CSS. Font files are not bundled; font stacks fall back to the fonts available on the viewing machine.
 
 | Source token | Value |
 | --- | --- |
@@ -17,4 +17,4 @@ Use the original runtime and its source tokens. Component appearance is supplied
 | --radius-control | 12px |
 | --radius-pill | 999px |
 
-tokens.css contains the original :root contract so free compositions can use any source token. Keep it together with the matching component build. Layout wrappers and slotted content may be freely composed; rendered component internals are owned by Lit.
+tokens.css contains every `:root` rule from the source stylesheet (410 tokens), including theme variants, so free compositions can use any source token. Keep it together with the matching component build. Layout wrappers and slotted content may be freely composed; rendered component internals are owned by the components.

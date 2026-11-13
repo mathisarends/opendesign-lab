@@ -1,21 +1,43 @@
 {
-  "source": "maximus-trading",
-  "commit": "e6858c59ab4b059c0cc75c93ec6dfe5cf15aabe9",
+  "name": "maximus",
+  "snapshot": "2741449449d2",
   "textEncoding": "utf8-lf",
+  "components": [
+    {
+      "tag": "cta-button",
+      "file": "frontend/src/shared/ui/cta-button.ts"
+    },
+    {
+      "tag": "text-input",
+      "file": "frontend/src/shared/ui/text-input.ts"
+    },
+    {
+      "tag": "app-checkbox",
+      "file": "frontend/src/shared/ui/checkbox/app-checkbox.ts"
+    },
+    {
+      "tag": "pill-tabs",
+      "file": "frontend/src/shared/ui/pill-tabs.ts"
+    }
+  ],
   "dependencies": {
-    "lit": "3.3.3",
+    "@lit/reactive-element": "2.1.2",
+    "lit-element": "4.2.2",
+    "lit-html": "3.3.3",
     "lucide": "1.48.0"
   },
   "tools": {
     "esbuild": "0.28.2"
   },
-  "exporterInputs": {
-    "examples/maximus/tools/sync.mjs": "10abb6795ac1eeb9cfac33efaa3ff91e7d2126d9bdbd53f7b1bc275980280c92",
-    "examples/maximus/tools/pull.mjs": "542348b643cac66d511edd702cd72c675038bbc835ebe57d449aec70ed95939b",
-    "examples/maximus/tools/snapshot.mjs": "a2eff504842a383676ec946b285e1e7ddc6a577855447882495e732f989f094d",
-    "examples/maximus/tools/selection.mjs": "450507f9a2e6bec47903be3199b8bc8afe9d9b80114b9a9d0da552839e402b61",
+  "exporter": {
+    "exporter/export.mjs": "cd4fef878fa7a78a23f2ae12fcb3ac9d0f856668080cfa9cc12a5b0850d8ef2d",
+    "exporter/config.mjs": "9a70d5c3d17e890a6c78e222eadd9fcf42f89177b8a6a198c883ae6adf0939f9",
+    "exporter/snapshot.mjs": "a2eff504842a383676ec946b285e1e7ddc6a577855447882495e732f989f094d",
+    "exporter/tokens.mjs": "6efc187cf9fa4906ff6e5b6732063dfd562a24e7a28b64393a1056e4dd112937",
     "skills/compose-components/SKILL.md": "8a0b824c3eaecb6e9de75c315c4f145ddd862535f5d56949a969a9c72fa8a017",
-    "pnpm-lock.yaml": "d80d092e98151d6739f93a999318672ececacc168d54b89543f72a7569755af6"
+    "skills/sync-components/SKILL.md": "0e06b3e84af029c62db0256b5db3cedf617fc04a1623e85e61b9a2ac26152d32",
+    "skills/sync-components/sync.mjs": "2b91ab7999ec49ae4e451ad56fb5dfdcc353578c9c375bfe7fd292bde2ea8de4",
+    "config": "518762ff64fc61be99a18c6f459c5b46114bfd450d4f5a4b3480538fd46ca8a1"
   },
   "inputs": [
     {
@@ -512,8 +534,10 @@
     }
   ],
   "outputs": {
-    "SKILL.md": "27c40ee86f2f185baaed9e3d6d75cb33e4950e4fccdd9258ca6c2781776bcf04",
-    "assets/ui.js": "6f7dd810b295516e0451c8d8618881b39c2805f8fb2894a7ac1c3fe99fd7d9db",
+    "SKILL.md": "854aa06f8352ec9f87cc264e29a8e73e9ad00d939aee67eb705b6c0a3a9a71e2",
+    "sync/SKILL.md": "77bf45a5c06dd97aae7746300fbfb1981af2e2ce1b751c7766f2f2721c15132d",
+    "sync/sync.mjs": "2b91ab7999ec49ae4e451ad56fb5dfdcc353578c9c375bfe7fd292bde2ea8de4",
+    "assets/ui.js": "1d8774b35b1b24c36bfb9c386343e6b2b727cff447d87970ce14ff37abdecc61",
     "components/src/shared/i18n/format.ts": "0c3e5ce8138f186115d5cceaf8447a5056be16fabbec0fc9f8673dbd4ad56f64",
     "components/src/shared/i18n/index.ts": "8d79b7d59e50256ba9120e0e51e022668ec0ee0a3b94d5a3a8fa14e0a7613c5a",
     "components/src/shared/i18n/locale.ts": "cc4fe7638a4d770eb9eb74d191e32d67a2c463eb8203493fa7bdb3dfe67d5b4b",
@@ -539,8 +563,8 @@
     "components/src/shared/ui/text-input.ts": "9ac6f0a4e8a905f678b42f9142525058eee3163b62d4e5ea865a0b9a9524a146",
     "components/src/style.css": "547a2b8d2a3e7a493585acc3cce12f75bfe63e754ecdb9253052676e7816d274",
     "components/tsconfig.json": "bb1f5cba1199c4eb080bfac12292b06e5c8b4831f80685055f9545d5436e8ec2",
-    "components/INDEX.md": "e65c568b31d08bcf55cd7770783abd987de4f809c91d8a0a43d93a6e75541451",
-    "assets/tokens.css": "8aa9ae5f2579117553afa10f0e19c7f78371c5792bc4abee56c669d7df16f5a1",
-    "references/DESIGN.md": "262ebd35785e107c36781cadd00e72afa8ed168e280da7123fca7e3bf07b93af"
+    "components/INDEX.md": "4f73881952464bf02a1df58477bc679cbf225f6897a6767fee96baa0a321a4c7",
+    "assets/tokens.css": "e6ecef6a790d821403dcf7fed8cd07e24a65e60cad7f33b4e1d5b0d8de72d5ad",
+    "references/DESIGN.md": "af541fa226638ed117b47828a4535f6c1fde6923fbd5f18af59c62fb6e16a812"
   }
 }
